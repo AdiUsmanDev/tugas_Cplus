@@ -1,0 +1,145 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+void soal1(){
+	int jam;
+	int menit;
+	int detik;
+	int jumlah_jam;
+	int jumlah_menit;
+	int total;
+	
+	cout<<"masukan jam -> ";
+	cin >> jam;
+	cout<<"masukan menit -> ";
+	cin>> menit;
+	cout<<"masukan detik - >";
+	cin>>detik;
+	
+	jumlah_jam = jam*3600;
+	jumlah_menit =menit*60;
+	total = jumlah_jam+jumlah_menit+detik;
+	
+	cout<<"total detik = ";
+	cout<<total;
+}
+
+void soal2(){
+ 
+ int detik ;
+ int menit;
+ int jam;
+ int sisa_detik;
+ int dtik;
+ 
+ cout<<"masukan detik  -> ";
+ cin>>detik;
+ 
+ jam = detik / 3600;
+ sisa_detik = detik % 3600;
+ menit = sisa_detik /60;
+ dtik = sisa_detik % 60;
+ 
+ cout<<jam;cout<<" jam ";cout<<menit;cout<<" menit ";cout<<dtik;cout<<" detik ";
+ 
+ 
+ 	
+}
+
+void soal3(){
+	
+	int tmp ;
+	int nilai_a;
+	int nilai_b;
+	
+		
+	cout<<"masukan nilai a -> ";
+	cin >> nilai_a;
+	cout<<"masukan nilai b -> ";
+	cin>> nilai_b;
+	
+ tmp = nilai_a;
+ nilai_a = nilai_b;
+ nilai_b = tmp;
+ 
+ 	
+cout<<"nilai a = ";cout<<nilai_a;
+cout<<" ";
+cout<<"nilai b = ";cout<<nilai_b;
+
+	
+}
+
+void soal4(){
+	int byk_data;
+	int nilai_min;
+	int nilai_max;
+	int nilai_rata;
+	int nilai;
+	int rta;
+	
+	nilai_min = 0;
+	nilai_max = 0;
+	nilai_rata =0;
+	
+	cout<<"masukan jumalh nilai";
+	cin>>byk_data;
+	
+	for (int i = 0; i<byk_data; i++){
+	    	
+	      cout<<"masukan nilai -> ";
+	      cin>>nilai;
+	      
+	      if(nilai_max == 0){
+	      	nilai_max = nilai;
+		  }
+		  if(nilai_min == 0){
+	      	nilai_min = nilai;
+	      }
+		  
+		   if(nilai > nilai_max){
+	      	nilai_max = nilai;
+		  }
+		   if(nilai < nilai_min){
+	      	nilai_min = nilai;
+		
+		  }
+		  nilai_rata = nilai + nilai_rata;
+	
+}
+
+rta = nilai_rata / byk_data; 
+
+cout<<"nilai max -> ";cout<<nilai_max;
+cout<<"nilai min -> ";cout<<nilai_min;
+cout<<"nilai rata rata -> ";cout<<rta;
+	
+}
+
+void soal5(){
+	int nilai_a;
+	int nilai_b;
+			
+	cout<<"masukan nilai a -> ";
+	cin >> nilai_a;
+	cout<<"masukan nilai b -> ";
+	cin>> nilai_b;
+	
+	if(nilai_b == 0 ){
+		cout<<"division by zero";
+	}else{
+	
+	double hasil = static_cast<double>(nilai_a) / nilai_b;
+  hasil = static_cast<int>(hasil * 1000 + 0.5) / 1000.0;
+  cout << "Hasil pembagian: " << (int)(hasil * 1000) / 1000.0 << std::endl;
+}
+	
+	
+}
+
+int main(){	
+//menjalankan perintah 
+soal5();
+}
